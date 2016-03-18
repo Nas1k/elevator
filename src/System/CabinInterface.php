@@ -4,7 +4,7 @@ namespace Vendor\Elevator\System;
 
 interface CabinInterface
 {
-    public function moveToFlor($flor);
+    public function moveToFloor($floor);
 
     public function isAvailable();
 }

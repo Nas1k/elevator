@@ -22,9 +22,9 @@ class Button implements ButtonInterface
         $this->taskFactory = $taskFactory;
     }
 
-    public function press($flor)
+    public function press($floor)
     {
-        $this->log("Press button: " . $flor);
-        $this->queue->add($this->taskFactory->create($flor));
+        $this->log("Press button: " . $floor);
+        $this->queue->add($this->taskFactory->create($floor));
     }
 }

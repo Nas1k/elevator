@@ -8,9 +8,9 @@ class Bell implements BellInterface
     {
         while ($from !== $to) {
             if ($to > $from) {
-                echo "Flor " . ++$from . PHP_EOL;
+                echo "Floor " . ++$from . PHP_EOL;
             } else {
-                echo "Flor " . $from-- . PHP_EOL;
+                echo "Floor " . $from-- . PHP_EOL;
             }
         }
     }

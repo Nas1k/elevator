@@ -25,7 +25,7 @@ class Worker implements WorkerInterface
         $this->log("run available tasks by worker");
         if ($this->cabin->isAvailable()) {
             foreach ($this->queue->get() as $task) {
-                $this->cabin->moveToFlor($task->getFlor());
+                $this->cabin->moveToFloor($task->getFloor());
             }
         }
     }

@@ -6,17 +6,17 @@ class Task implements TaskInterface
 {
     use Logger;
 
-    protected $flor;
+    protected $floor;
 
     public function __construct($number)
     {
-        $this->log("set flor to task with number " . $number);
-        $this->flor = $number;
+        $this->log("set floor to task with number " . $number);
+        $this->floor = $number;
     }
 
-    public function getFlor()
+    public function getFloor()
     {
-        $this->log("get flor form task " . $this->flor);
-        return $this->flor;
+        $this->log("get floor form task " . $this->floor);
+        return $this->floor;
     }
 }

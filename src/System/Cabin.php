@@ -8,13 +8,13 @@ class Cabin implements CabinInterface
 {
     use Logger;
 
-    protected $flor;
+    protected $floor;
 
     protected $denied = false;
 
     protected $door;
 
-    protected $currentFlor = 1;
+    protected $currentFloor = 1;
 
     protected $passenger;
 
@@ -34,14 +34,14 @@ class Cabin implements CabinInterface
         return !$this->denied && !$this->door->isOpen();
     }
 
-    public function moveToFlor($flor)
+    public function moveToFloor($floor)
     {
-        $this->log("Start moving to flor:" . $flor);
+        $this->log("Start moving to floor:" . $floor);
         $this->door->close();
         $this->denied = true;
-        $this->bell->notify($this->currentFlor, $flor);
+        $this->bell->notify($this->currentFloor, $floor);
         $this->denied = false;
-        $this->currentFlor = $flor;
+        $this->currentFloor = $floor;
         $this->door->open();
     }
 }

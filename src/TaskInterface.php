@@ -4,5 +4,5 @@ namespace Vendor\Elevator;
 
 interface TaskInterface
 {
-    public function getFlor();
+    public function getFloor();
 }
